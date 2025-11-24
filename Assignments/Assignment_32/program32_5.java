@@ -4,16 +4,16 @@
 //  Description : It is used to print patterns on screen 
 //  Input :     Integer 
 //  Output :                
-//               *  *   *   #
-//               *  *   #   *
-//               *  #   *   *
-//               #  *   *   *
-//   
+//   1  2   3   4   5
+//   1  2           5
+//   1      3       5
+//   1          4   5
+//   1  2   3   4   5 
+//
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   23/11/25
 //
 ////////////////////////////////////////////////////////////////////////
-
 import java.util.Scanner;
 
 class Pattern
@@ -21,35 +21,39 @@ class Pattern
     public void Display(int iRow, int iCol)
     {
         int i = 0, j=0;
-        char ch = '\0';
+              if(iRow != iCol)
+        {
+            System.out.println("Invalid input");
+            System.out.println("row number and coloumn number should be same");
+
+            return;
+        }
 
         for(i=1; i<=iRow; i++)
         { 
                    
             for(j=1; j<=iCol; j++)
             {
-                if( j==iCol-i+1 )
+                if(i == j ||i==1 || i==iRow || j==1 || j==iCol)
                 {
-                    System.out.printf("#\t");
+                    System.out.printf("%d\t",j);
                 }
                 else
                 {
-                    System.out.printf("*\t");
+                    System.out.print("\t");
                 }
-                 
             }
             System.out.println();
         }
     }
 }
-
 ////////////////////////////////////////////////////////////////////////
 //
 //  Entry point function for the application
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program32_1
+class program32_5
 {
     public static void main(String A[])
     {
@@ -72,11 +76,12 @@ class program32_1
 //
 //  Test cases successfully handled by application
 //
-//  Input:   iRow= 4  iCol= 4
+//  Input:   iRow= 5  iCol= 5
 //  Output :                
-//               *  *   *   #
-//               *  *   #   *
-//               *  #   *   *
-//               #  *   *   *  
+//   1  2   3   4   5
+//   1  2           5
+//   1      3       5
+//   1          4   5
+//   1  2   3   4   5 
 //  
 ////////////////////////////////////////////////////////////////////////

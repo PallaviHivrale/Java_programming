@@ -4,16 +4,18 @@
 //  Description : It is used to print patterns on screen 
 //  Input :     Integer 
 //  Output :                
-//               *  *   *   #
-//               *  *   #   *
-//               *  #   *   *
-//               #  *   *   *
-//   
+//
+//    *   *   *   *   *   *
+//    *               *   *
+//    *           *       *
+//    *       *           *
+//    *   *               *
+//    *   *   *   *   *   *
+//
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   23/11/25
 //
 ////////////////////////////////////////////////////////////////////////
-
 import java.util.Scanner;
 
 class Pattern
@@ -21,20 +23,19 @@ class Pattern
     public void Display(int iRow, int iCol)
     {
         int i = 0, j=0;
-        char ch = '\0';
 
         for(i=1; i<=iRow; i++)
         { 
                    
             for(j=1; j<=iCol; j++)
             {
-                if( j==iCol-i+1 )
+                if(j==iCol-i+1 || i==1 || i==iRow ||  j==1 || j ==iCol || j==iCol-i+1)
                 {
-                    System.out.printf("#\t");
+                    System.out.printf("*\t");
                 }
                 else
                 {
-                    System.out.printf("*\t");
+                    System.out.printf(" \t");
                 }
                  
             }
@@ -42,14 +43,13 @@ class Pattern
         }
     }
 }
-
 ////////////////////////////////////////////////////////////////////////
 //
 //  Entry point function for the application
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program32_1
+class program32_3
 {
     public static void main(String A[])
     {
@@ -74,9 +74,12 @@ class program32_1
 //
 //  Input:   iRow= 4  iCol= 4
 //  Output :                
-//               *  *   *   #
-//               *  *   #   *
-//               *  #   *   *
-//               #  *   *   *  
+//
+//    *   *   *   *   *   *
+//    *               *   *
+//    *           *       *
+//    *       *           *
+//    *   *               *
+//    *   *   *   *   *   * 
 //  
 ////////////////////////////////////////////////////////////////////////

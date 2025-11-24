@@ -5,9 +5,9 @@
 //  Input :     Integer 
 //  Output :                
 //               *  *   *   #
-//               *  *   #   *
-//               *  #   *   *
-//               #  *   *   *
+//               *  *   #   @
+//               *  #   @   @
+//               #  @   @   @
 //   
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   23/11/25
@@ -21,22 +21,24 @@ class Pattern
     public void Display(int iRow, int iCol)
     {
         int i = 0, j=0;
-        char ch = '\0';
 
         for(i=1; i<=iRow; i++)
         { 
                    
             for(j=1; j<=iCol; j++)
             {
-                if( j==iCol-i+1 )
-                {
-                    System.out.printf("#\t");
-                }
-                else
+                if(j<iCol-i+1)
                 {
                     System.out.printf("*\t");
                 }
-                 
+                else if(j==iCol-i+1)
+                {
+                    System.out.printf("#\t");
+                }
+                else 
+                {
+                    System.out.printf("@\t");
+                }
             }
             System.out.println();
         }
@@ -49,7 +51,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program32_1
+class program32_2
 {
     public static void main(String A[])
     {
@@ -75,8 +77,8 @@ class program32_1
 //  Input:   iRow= 4  iCol= 4
 //  Output :                
 //               *  *   *   #
-//               *  *   #   *
-//               *  #   *   *
-//               #  *   *   *  
+//               *  *   #   @
+//               *  #   @   @
+//               #  @   @   @ 
 //  
 ////////////////////////////////////////////////////////////////////////

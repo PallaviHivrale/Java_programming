@@ -4,16 +4,17 @@
 //  Description : It is used to print patterns on screen 
 //  Input :     Integer 
 //  Output :                
-//               *  *   *   #
-//               *  *   #   *
-//               *  #   *   *
-//               #  *   *   *
-//   
+//    *   *   *   *   *   *
+//    *   #   #   #   *   *
+//    *   #   #   *   $   *
+//    *   #   *   $   $   *
+//    *   *   $   $   $   *
+//    *   *   *   *   *   *
+//
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   23/11/25
 //
 ////////////////////////////////////////////////////////////////////////
-
 import java.util.Scanner;
 
 class Pattern
@@ -21,35 +22,43 @@ class Pattern
     public void Display(int iRow, int iCol)
     {
         int i = 0, j=0;
-        char ch = '\0';
+              if(iRow != iCol)
+        {
+            System.out.println("Invalid input");
+            System.out.println("row number and coloumn number should be same");
+
+            return;
+        }
 
         for(i=1; i<=iRow; i++)
         { 
                    
             for(j=1; j<=iCol; j++)
             {
-                if( j==iCol-i+1 )
+                if(j == iCol - i + 1 ||i==1 || i==iRow || j==1 || j==iCol)
                 {
-                    System.out.printf("#\t");
+                    System.out.print("*\t");
+                }
+                else if(j < iCol - i + 1)   // RIGHT DIAGONAL
+                {
+                    System.out.print("#\t");
                 }
                 else
                 {
-                    System.out.printf("*\t");
+                    System.out.print("$\t");
                 }
-                 
             }
             System.out.println();
         }
     }
 }
-
 ////////////////////////////////////////////////////////////////////////
 //
 //  Entry point function for the application
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program32_1
+class program32_4
 {
     public static void main(String A[])
     {
@@ -72,11 +81,12 @@ class program32_1
 //
 //  Test cases successfully handled by application
 //
-//  Input:   iRow= 4  iCol= 4
-//  Output :                
-//               *  *   *   #
-//               *  *   #   *
-//               *  #   *   *
-//               #  *   *   *  
+//  Input:   iRow= 6  iCol= 6
+//    *   *   *   *   *   *
+//    *   #   #   #   *   *
+//    *   #   #   *   $   *
+//    *   #   *   $   $   *
+//    *   *   $   $   $   *
+//    *   *   *   *   *   *
 //  
 ////////////////////////////////////////////////////////////////////////
