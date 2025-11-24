@@ -2,10 +2,10 @@
 //
 //  Function Name : Pattern
 //  Description : It is used to print patterns on screen 
-//  Input :  iRow = 3    iCol = 4
-//  Output :    1   2   3   4
-//              5   6   7   8   
-//              9   1   2   3
+//  Input :  iRow = 4    iCol = 4
+//  Output :    1   2   3   4   
+//              2   3   4   5
+//              3   4   5   6
 //              4   5   6   7
 //  Date :      21/11/25
 //
@@ -18,21 +18,18 @@ class Pattern
     public void Display(int iRow, int iCol)
     {
         int i = 0, j = 0;  
-        int num = 1;      
-
-        for(i = 1; i <= iRow; i++)
+        int num = 1;  
+        
+        for(i=1; i<= iRow; i++)
         {
+            int iValue = i;
             for(j=1; j<=iCol; j++)
             {
-                System.out.printf("%d\t",num);
-                num++;
-                
-                if(num == 10)
-                {
-                    num = 1;
-                }
+                System.out.printf("%d\t",iValue);
+                iValue++;
             }
             System.out.println();
+            
         }
     }
 }
@@ -43,7 +40,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program29_1
+class program29_5
 {
     public static void main(String A[])
     {
@@ -66,10 +63,9 @@ class program29_1
 //
 //  Test cases successfully handled by application
 //
-//  Input :  iRow = 3    iCol = 4
-//  Output :    1   2   3   4
-//              5   6   7   8   
-//              9   1   2   3
+//  Input :  iRow = 4    iCol = 4
+//  Output :    1   2   3   4   
+//              2   3   4   5
+//              3   4   5   6
 //              4   5   6   7
-//  
 ////////////////////////////////////////////////////////////////////////

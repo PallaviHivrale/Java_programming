@@ -2,11 +2,12 @@
 //
 //  Function Name : Pattern
 //  Description : It is used to print patterns on screen 
-//  Input :  iRow = 3    iCol = 4
-//  Output :    1   2   3   4
-//              5   6   7   8   
-//              9   1   2   3
-//              4   5   6   7
+//  Input :  iRow = 5    iCol = 5
+//  Output :    1    2   3   4   5
+//             -1   -2  -3  -4  -5
+//              1    2   3   4   5
+//             -1   -2  -3  -4  -5
+//              1    2   3   4   5
 //  Date :      21/11/25
 //
 ////////////////////////////////////////////////////////////////////////
@@ -18,21 +19,22 @@ class Pattern
     public void Display(int iRow, int iCol)
     {
         int i = 0, j = 0;  
-        int num = 1;      
-
-        for(i = 1; i <= iRow; i++)
+        int num = 1;  
+        
+        for(i=1; i<= iRow; i++)
         {
             for(j=1; j<=iCol; j++)
             {
-                System.out.printf("%d\t",num);
-                num++;
-                
-                if(num == 10)
+                if(i % 2 == 1)
                 {
-                    num = 1;
+                System.out.printf("%d\t",j);
+                }
+                else
+                {
+                    System.out.printf("-%d\t",j);
                 }
             }
-            System.out.println();
+            System.out.printf("\n");
         }
     }
 }
@@ -43,7 +45,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program29_1
+class program29_4
 {
     public static void main(String A[])
     {
@@ -66,10 +68,10 @@ class program29_1
 //
 //  Test cases successfully handled by application
 //
-//  Input :  iRow = 3    iCol = 4
-//  Output :    1   2   3   4
-//              5   6   7   8   
-//              9   1   2   3
-//              4   5   6   7
+//  Input :  iRow = 4    iCol = 4
+//  Output :    2   4   6   8   10
+//              1   3   5   7   9
+//              2   4   6   8   10
+//              1   3   5   7   9
 //  
 ////////////////////////////////////////////////////////////////////////
