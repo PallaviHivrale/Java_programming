@@ -3,10 +3,12 @@
 //  Function Name : Pattern
 //  Description : It is used to print patterns on screen 
 //  Input :     Integer 
-//  Output :        *
-//                  *   *
-//                  *   *   *
-//                  *   *   *   *
+//  Output :                
+//               $   *   *   *   *
+//               #   $   *   *   *
+//               #   #   $   *   *
+//               #   #   #   $   *
+//               #   #   #   #   $
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   22/11/25
 //
@@ -33,7 +35,15 @@ class Pattern
                    
             for(j=1; j<=iCol; j++)
             {
-                if(i>=j)
+                if(i==j )
+                {
+                    System.out.printf("%%\t");
+                }
+                else if(i>=j)
+                {
+                    System.out.printf("#\t");
+                }
+                else 
                 {
                     System.out.printf("*\t");
                 }
@@ -49,7 +59,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program31_1
+class program31_3
 {
     public static void main(String A[])
     {
@@ -74,8 +84,10 @@ class program31_1
 //
 //  Input: iRow= 6  iCol= 5
 //
-//  Output :        *
-//                  *   *
-//                  *   *   *
-//                  *   *   *   *
+//  Output :                
+//               $   *   *   *   *
+//               #   $   *   *   *
+//               #   #   $   *   *
+//               #   #   #   $   *
+//               #   #   #   #   $
 ////////////////////////////////////////////////////////////////////////

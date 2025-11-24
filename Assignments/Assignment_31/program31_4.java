@@ -3,10 +3,13 @@
 //  Function Name : Pattern
 //  Description : It is used to print patterns on screen 
 //  Input :     Integer 
-//  Output :        *
-//                  *   *
-//                  *   *   *
-//                  *   *   *   *
+//  Output :                
+//               *   *   *   *   *  *
+//               *   *              *
+//               *       *          *
+//               *           *      *
+//               *               *  *   
+//               *   *   *   *   *  *
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   22/11/25
 //
@@ -15,8 +18,7 @@
 import java.util.Scanner;
 
 class Pattern
-{
-    
+{   
     public void Display(int iRow, int iCol)
     {
         int i = 0, j=0;
@@ -33,10 +35,15 @@ class Pattern
                    
             for(j=1; j<=iCol; j++)
             {
-                if(i>=j)
+                if(i==1 || i==iRow || j==1 || j==iCol || i==j)
                 {
-                    System.out.printf("*\t");
+                    System.out.print("*\t");
                 }
+                else
+                {
+                    System.out.print("\t");
+                }
+             
             }
             System.out.println();
         }
@@ -49,7 +56,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program31_1
+class program31_4
 {
     public static void main(String A[])
     {
@@ -72,10 +79,13 @@ class program31_1
 //
 //  Test cases successfully handled by application
 //
-//  Input: iRow= 6  iCol= 5
+//  Input: iRow= 6  iCol= 6
 //
-//  Output :        *
-//                  *   *
-//                  *   *   *
-//                  *   *   *   *
+//  Output :                
+//               *   *   *   *   *  *
+//               *   *              *
+//               *       *          *
+//               *           *      *
+//               *               *  *   
+//               *   *   *   *   *  *
 ////////////////////////////////////////////////////////////////////////

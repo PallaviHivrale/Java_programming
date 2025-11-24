@@ -3,10 +3,11 @@
 //  Function Name : Pattern
 //  Description : It is used to print patterns on screen 
 //  Input :     Integer 
-//  Output :        *
-//                  *   *
-//                  *   *   *
-//                  *   *   *   *
+//  Output :                
+//             1    2   3   4
+//                  2   3   4
+//                      3   4
+//                          4  
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   22/11/25
 //
@@ -15,28 +16,26 @@
 import java.util.Scanner;
 
 class Pattern
-{
-    
+{   
     public void Display(int iRow, int iCol)
     {
         int i = 0, j=0;
 
-        if(iRow != iCol)
-        {
-            System.out.println("Invalid input");
-            System.out.println("row number and coloumn number should be same");
-            return;
-        }
         
         for(i=1; i<=iRow; i++)
         { 
                    
             for(j=1; j<=iCol; j++)
             {
-                if(i>=j)
+                if( j>=i)
                 {
-                    System.out.printf("*\t");
+                    System.out.printf("%d\t",j);
                 }
+                else
+                {
+                    System.out.print("\t");
+                }
+             
             }
             System.out.println();
         }
@@ -49,7 +48,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program31_1
+class program31_5
 {
     public static void main(String A[])
     {
@@ -72,10 +71,11 @@ class program31_1
 //
 //  Test cases successfully handled by application
 //
-//  Input: iRow= 6  iCol= 5
+//  Input: iRow= 4  iCol= 4
 //
-//  Output :        *
-//                  *   *
-//                  *   *   *
-//                  *   *   *   *
+//  Output :                
+//             1    2   3   4
+//                  2   3   4
+//                      3   4
+//                          4  
 ////////////////////////////////////////////////////////////////////////
