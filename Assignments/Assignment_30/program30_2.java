@@ -3,12 +3,12 @@
 //  Function Name : Pattern
 //  Description : It is used to print patterns on screen 
 //  Input :     Integer 
-//  Output :     * # # #
-//               * * # # 
-//               * * * # 
-//               * * * * 
+//  Output :        * * * *
+//                  * * * # 
+//                  * * # # 
+//                  * # # # 
 //  Author : Pallavi Kishanrao Hivrale
-//  Date :   21/11/25
+//  Date :   22/11/25
 //
 ////////////////////////////////////////////////////////////////////////
 
@@ -56,7 +56,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program30_1
+class program30_2
 {
     public static void main(String A[])
     {
@@ -81,9 +81,9 @@ class program30_1
 //
 //  Input: 4
 //
-//  Output :     * # # #
-//               * * # # 
-//               * * * # 
-//               * * * *  
+//  Output :        * * * *
+//                  * * * # 
+//                  * * # # 
+//                  * # # #
 //  
 ////////////////////////////////////////////////////////////////////////

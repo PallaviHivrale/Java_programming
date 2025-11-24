@@ -3,12 +3,14 @@
 //  Function Name : Pattern
 //  Description : It is used to print patterns on screen 
 //  Input :     Integer 
-//  Output :     * # # #
-//               * * # # 
-//               * * * # 
-//               * * * * 
+//  Output :        *  *  *  *  *    
+//                  *  @  @  @  * 
+//                  *  @  @  @  * 
+//                  *  @  @  @  *
+//                  *  @  @  @  *
+//                  *  *  *  *  *
 //  Author : Pallavi Kishanrao Hivrale
-//  Date :   21/11/25
+//  Date :   22/11/25
 //
 ////////////////////////////////////////////////////////////////////////
 
@@ -16,32 +18,23 @@ import java.util.Scanner;
 
 class Pattern
 {
-    //filter for square matrix
+    
     public void Display(int iRow, int iCol)
     {
         int i = 0, j=0;
-
-        if(iRow != iCol)
-        {
-            System.out.println("Invalid input");
-            System.out.println("row number and coloumn number should be same");
-
-            return;
-        }
         
-
         for(i=1; i<=iRow; i++)
         { 
                    
             for(j=1; j<=iCol; j++)
             {
-                if(i>=j)
+                if(i==1 || i==iRow || j==1  ||  j==iCol)
                 {
                     System.out.printf("*\t");
                 }
                 else
                 {
-                    System.out.printf("#\t");
+                    System.out.printf("@\t");
                 }
                  
             }
@@ -56,13 +49,13 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program30_1
+class program30_4
 {
     public static void main(String A[])
     {
         Scanner sobj = new Scanner(System.in);
         int iValue1 = 0, iValue2 = 0;
-
+    
         System.out.println("Enter number of rows : ");
         iValue1 = sobj.nextInt();
 
@@ -79,11 +72,12 @@ class program30_1
 //
 //  Test cases successfully handled by application
 //
-//  Input: 4
+//  Input: iRow= 6  iCol= 5
 //
-//  Output :     * # # #
-//               * * # # 
-//               * * * # 
-//               * * * *  
-//  
+//  Output :        *  *  *  *  *    
+//                  *  @  @  @  * 
+//                  *  @  @  @  * 
+//                  *  @  @  @  *
+//                  *  @  @  @  *
+//                  *  *  *  *  *
 ////////////////////////////////////////////////////////////////////////
