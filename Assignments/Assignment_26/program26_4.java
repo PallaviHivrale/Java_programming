@@ -1,13 +1,13 @@
-////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 //
-//  Function Name : Pattern
+//  File Name : program26_4.c
 //  Description : It is used to print patterns on screen 
-//  Input :     Integer 
-//  Output : A B C D E 
+//  Input :  Integer
+//  Output : #   1   *    #   2   *   #   3   *   #   4   *   
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   21/11/25
 //
-////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 
 import java.util.Scanner;
 
@@ -16,22 +16,22 @@ class Pattern
     public void Display(int iNo)
     {
         int iCnt = 0;
-        char ch = 'A';
 
-        for(iCnt =1; iCnt<= iNo; iCnt++,ch++)
+        for(iCnt = 1; iCnt<= iNo; iCnt++)
         {
-            System.out.printf("%c\t",ch);
+            System.out.print(iCnt+"\t*\t");
         }
         System.out.println();
     }
 }
+
 ////////////////////////////////////////////////////////////////////////
 //
 //  Entry point function for the application
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program26_1
+class program26_4
 {
     public static void main(String A[])
     {
@@ -46,12 +46,13 @@ class program26_1
     
     }  
 }
+
 ////////////////////////////////////////////////////////////////////////
 //
 //  Test cases successfully handled by application
 //
 //  Input: 5
 //
-//  Output : A  B   C   D   E   
+//  Output : #   1   *    #   2   *   #   3   *   #   4   *   
 //  
 ////////////////////////////////////////////////////////////////////////

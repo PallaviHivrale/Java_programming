@@ -1,13 +1,24 @@
-////////////////////////////////////////////////////////////////////////
+/*
+    iRow : 5
+    iCol : 5
+
+    input:5
+    Output: 1   *   2   *   3   *   4   *   5   *
+    
+    
+
+*/
+
+////////////////////////////////////////////////////////
 //
 //  Function Name : Pattern
-//  Description : It is used to print patterns on screen 
-//  Input :     Integer 
-//  Output : A B C D E 
+//  Description :  It is used to print patterns on screen 
+//  Input :  Integer
+//  Output : 1  *   2   *   3   *   4   *   5   * 
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   21/11/25
 //
-////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 
 import java.util.Scanner;
 
@@ -16,22 +27,22 @@ class Pattern
     public void Display(int iNo)
     {
         int iCnt = 0;
-        char ch = 'A';
 
-        for(iCnt =1; iCnt<= iNo; iCnt++,ch++)
+        for(iCnt = 1; iCnt<= iNo; iCnt++)
         {
-            System.out.printf("%c\t",ch);
+            System.out.print(iCnt +"\t*\t");
         }
         System.out.println();
     }
 }
+
 ////////////////////////////////////////////////////////////////////////
 //
 //  Entry point function for the application
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program26_1
+class program26_3
 {
     public static void main(String A[])
     {
@@ -46,12 +57,13 @@ class program26_1
     
     }  
 }
+
 ////////////////////////////////////////////////////////////////////////
 //
 //  Test cases successfully handled by application
 //
 //  Input: 5
 //
-//  Output : A  B   C   D   E   
+//  Output : 1  *   2   *   3   *   4   *   5   *   
 //  
 ////////////////////////////////////////////////////////////////////////
