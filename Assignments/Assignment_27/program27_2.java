@@ -4,10 +4,10 @@
 //  Description :  pattern printing 
 //
 //  Input :  iRow = 4     iCol = 3
-//  Output :    *  *  *   
-//              *  *  *
-//              *  *  *
-//              *  *  *
+//  Output :    1  2  3  
+//              1  2  3 
+//              1  2  3 
+//              1  2  3 
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   21/11/25
 //
@@ -25,7 +25,7 @@ class Pattern
         {
             for(j = 1; j <= iCol; j++)
             {
-                System.out.print("*\t");
+                System.out.printf("%d\t",j);
             }
             System.out.println();
         }
@@ -38,7 +38,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program27_1
+class program27_2
 {
     public static void main(String A[])
     {
@@ -63,9 +63,10 @@ class program27_1
 //
 //  Input: iRow:4  iCol:3
 //
-//  Output :        * * * *
-//                  * * * # 
-//                  * * # # 
-//                  * # # #
+//  Input :  iRow = 4     iCol = 3
+//  Output :    1  2  3  
+//              1  2  3 
+//              1  2  3 
+//              1  2  3 
 //  
 ////////////////////////////////////////////////////////////////////////
