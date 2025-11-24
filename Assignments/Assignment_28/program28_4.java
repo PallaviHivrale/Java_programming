@@ -3,11 +3,11 @@
 //  File Name : program27_1.c
 //  Description :  pattern printing 
 //
-//  Input :  iRow = 4    iCol = 4
-//  Output :    A   B   C   D
-//              A   B   C   D
-//              A   B   C   D
-//              A   B   C   D
+//  Input :  iRow = 4    iCol = 5
+//  Output :    4   4   4   4   4
+//              3   3   3   3   3
+//              2   2   2   2   2
+//              1   1   1   1   1
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   21/11/25
 //
@@ -20,17 +20,14 @@ class Pattern
     public void Display(int iRow, int iCol)
     {
         int i = 0, j = 0;
+        
 
-        for(i = 1; i <= iRow; i++)
+        for(i = iRow; i >= 1; i--)
         {
-            char ch = 'A';
-
             for(j=1; j<=iCol; j++)
             {
-                System.out.printf("%c\t",ch);   
-                ch++;            
+                System.out.printf("%d\t",i);  
             }
-            
             System.out.println();
         }
     }
@@ -42,7 +39,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program28_1
+class program28_4
 {
     public static void main(String A[])
     {
@@ -65,10 +62,10 @@ class program28_1
 //
 //  Test cases successfully handled by application
 //
-//  Input :  iRow = 4    iCol = 4
-//  Output :    A   B   C   D
-//              A   B   C   D
-//              A   B   C   D
-//              A   B   C   D
+//  Input :  iRow = 4    iCol = 5
+//  Output :    4   4   4   4   4
+//              3   3   3   3   3
+//              2   2   2   2   2
+//              1   1   1   1   1
 //  
 ////////////////////////////////////////////////////////////////////////

@@ -1,17 +1,14 @@
-////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
 //
-//  File Name : program27_1.c
-//  Description :  pattern printing 
+//  Function Name : Pattern
+//  Description : It is used to print patterns on screen 
+//  Input :  iRow = 3    iCol = 4
+//  Output :    1   2   3   4
+//              5   6   7   8   
+//              9   10  11  12
+//  Date :      21/11/25
 //
-//  Input :  iRow = 4    iCol = 4
-//  Output :    A   B   C   D
-//              A   B   C   D
-//              A   B   C   D
-//              A   B   C   D
-//  Author : Pallavi Kishanrao Hivrale
-//  Date :   21/11/25
-//
-////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
 
 import java.util.Scanner;
 
@@ -19,18 +16,16 @@ class Pattern
 {
     public void Display(int iRow, int iCol)
     {
-        int i = 0, j = 0;
+        int i = 0, j = 0;  
+        int num = 1;      
 
         for(i = 1; i <= iRow; i++)
         {
-            char ch = 'A';
-
             for(j=1; j<=iCol; j++)
             {
-                System.out.printf("%c\t",ch);   
-                ch++;            
+                System.out.printf("%d\t",num);  
+                num++;
             }
-            
             System.out.println();
         }
     }
@@ -42,7 +37,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program28_1
+class program28_5
 {
     public static void main(String A[])
     {
@@ -65,10 +60,9 @@ class program28_1
 //
 //  Test cases successfully handled by application
 //
-//  Input :  iRow = 4    iCol = 4
-//  Output :    A   B   C   D
-//              A   B   C   D
-//              A   B   C   D
-//              A   B   C   D
+//  Input :  iRow = 3    iCol = 4
+//  Output :    1   2   3   4
+//              5   6   7   8   
+//              9   10  11  12
 //  
 ////////////////////////////////////////////////////////////////////////

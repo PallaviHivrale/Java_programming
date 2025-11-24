@@ -5,9 +5,9 @@
 //
 //  Input :  iRow = 4    iCol = 4
 //  Output :    A   B   C   D
+//              a   b   c   d
 //              A   B   C   D
-//              A   B   C   D
-//              A   B   C   D
+//              a   b   c   d
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   21/11/25
 //
@@ -25,11 +25,20 @@ class Pattern
         {
             char ch = 'A';
 
-            for(j=1; j<=iCol; j++)
-            {
-                System.out.printf("%c\t",ch);   
-                ch++;            
-            }
+        if(i % 2 != 0)
+        {
+            ch ='A';
+        }
+        else
+        {
+           ch = 'a';
+        }
+
+        for(j=1; j<=iCol; j++)
+        {
+            System.out.printf("%c\t",ch);
+            ch++;  
+        }
             
             System.out.println();
         }
@@ -42,7 +51,7 @@ class Pattern
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program28_1
+class program28_2
 {
     public static void main(String A[])
     {
@@ -67,8 +76,8 @@ class program28_1
 //
 //  Input :  iRow = 4    iCol = 4
 //  Output :    A   B   C   D
+//              a   b   c   d
 //              A   B   C   D
-//              A   B   C   D
-//              A   B   C   D
+//              a   b   c   d
 //  
 ////////////////////////////////////////////////////////////////////////
