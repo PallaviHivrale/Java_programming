@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////
 //
 //  Function Name : Pattern
-//  Description : accept character from user and check whether it is alphabet or not(A-Z a-z)
+//  Description : accept character from user and check whether it is capital alphabet or not(A-Z a-z)
 //  Input :     Bool
 //  Output :                
 //
@@ -13,9 +13,9 @@ import java.util.Scanner;
 
 class StringX
 { 
-    public boolean chkAlpha(char ch)
+    public boolean chkDigit(char ch)
     {
-        if((ch>='A' && ch <= 'Z') || (ch>='a' && ch <='z'))
+        if((ch>='0' && ch <= '9'))
         {
             return true;
 
@@ -34,7 +34,7 @@ class StringX
 //
 ////////////////////////////////////////////////////////////////////////
 
-class program33_1
+class program33_3
 {
     public static void main(String A[])
     {
@@ -46,7 +46,7 @@ class program33_1
 
         StringX strobj = new StringX();
 
-        System.out.println(strobj.chkAlpha(ch));
+        System.out.println(strobj.chkDigit(ch));
         
     }
 }
@@ -55,10 +55,10 @@ class program33_1
 //
 //  Test cases successfully handled by application
 //
-//  Input:   F
+//  Input:   7
 //  Output : true
 //
-//  Input : &
+//  Input :  d
 //  output : false
 //  
 ////////////////////////////////////////////////////////////////////////
