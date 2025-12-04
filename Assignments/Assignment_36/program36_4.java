@@ -1,9 +1,10 @@
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name : Reverse
-//  Description :  accept string from user convert it  lower case 
+//  Function Name : ToggleX
+//  Description :  accept string from user and display only digits from string     
+//  
 //  Input :   string
-//  Output :  void           
+//  Output :  int        
 //
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   4/12/25
@@ -13,20 +14,19 @@ import java.util.*;
 
 class StringX
 {
-    public String toLowerCaseX(String str)
+    public void DisplayDigits(String str)
     {
         int iCnt = 0;
         char Arr[] = str.toCharArray();
 
         for(iCnt= 0; iCnt<Arr.length; iCnt++)
         {
-            if(Arr[iCnt] >= 'A' && Arr[iCnt] <= 'Z' )
+            if(Arr[iCnt] >= '0' && Arr[iCnt] <= '9' )
             {
-                Arr[iCnt] = (char)(Arr[iCnt] + 32);       
+                System.out.print(Arr[iCnt]);      
             }
         }
-        
-        return new String(Arr);        
+        System.out.println();        
     }
 }
 
@@ -35,12 +35,10 @@ class StringX
 //  Entry point function for the application
 //
 /////////////////////////////////////////////////////////////////////////
-class program36_1
+class program36_4
 {
     public static void main(String A[])
     {
-        String sRet = null;
-
         Scanner scanobj = new Scanner(System.in);
 
         System.out.println("Enter String : ");
@@ -48,10 +46,7 @@ class program36_1
 
         StringX strobj = new StringX();
 
-        sRet =strobj.toLowerCaseX(sobj);      
-
-        System.out.println("updated string:"+sRet);
-        
+        strobj.DisplayDigits(sobj);      
     }
 } 
 
@@ -59,8 +54,8 @@ class program36_1
 //
 //  Test cases successfully handled by application
 //
-//  Input :  MARVELLOUS
-//  Output : marvellous  
+//  Input :  MarvellouS
+//  Output : mARVELLOUs 
 //
 //  
 ////////////////////////////////////////////////////////////////////////

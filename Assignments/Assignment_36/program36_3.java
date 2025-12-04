@@ -1,9 +1,9 @@
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name : Reverse
-//  Description :  accept string from user convert it  lower case 
+//  Function Name : ToggleX
+//  Description :  accept string from user and toggle the case 
 //  Input :   string
-//  Output :  void           
+//  Output :  string         
 //
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   4/12/25
@@ -13,7 +13,7 @@ import java.util.*;
 
 class StringX
 {
-    public String toLowerCaseX(String str)
+    public String strToggleX(String str)
     {
         int iCnt = 0;
         char Arr[] = str.toCharArray();
@@ -23,6 +23,10 @@ class StringX
             if(Arr[iCnt] >= 'A' && Arr[iCnt] <= 'Z' )
             {
                 Arr[iCnt] = (char)(Arr[iCnt] + 32);       
+            }
+            else if(Arr[iCnt] >= 'a' && Arr[iCnt] <= 'z')
+            {
+                Arr[iCnt] = (char)(Arr[iCnt] - 32);
             }
         }
         
@@ -35,7 +39,7 @@ class StringX
 //  Entry point function for the application
 //
 /////////////////////////////////////////////////////////////////////////
-class program36_1
+class program36_3
 {
     public static void main(String A[])
     {
@@ -48,7 +52,7 @@ class program36_1
 
         StringX strobj = new StringX();
 
-        sRet =strobj.toLowerCaseX(sobj);      
+        sRet =strobj.strToggleX(sobj);      
 
         System.out.println("updated string:"+sRet);
         
@@ -59,8 +63,8 @@ class program36_1
 //
 //  Test cases successfully handled by application
 //
-//  Input :  MARVELLOUS
-//  Output : marvellous  
+//  Input :  MarvellouS
+//  Output : mARVELLOUs 
 //
 //  
 ////////////////////////////////////////////////////////////////////////

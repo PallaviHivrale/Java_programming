@@ -3,7 +3,7 @@
 //  Function Name : Reverse
 //  Description :  accept string from user convert it  lower case 
 //  Input :   string
-//  Output :  void           
+//  Output :  string         
 //
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   4/12/25
@@ -13,16 +13,16 @@ import java.util.*;
 
 class StringX
 {
-    public String toLowerCaseX(String str)
+    public String toUpperCaseX(String str)
     {
         int iCnt = 0;
         char Arr[] = str.toCharArray();
 
         for(iCnt= 0; iCnt<Arr.length; iCnt++)
         {
-            if(Arr[iCnt] >= 'A' && Arr[iCnt] <= 'Z' )
+            if(Arr[iCnt] >= 'a' && Arr[iCnt] <= 'z' )
             {
-                Arr[iCnt] = (char)(Arr[iCnt] + 32);       
+                Arr[iCnt] = (char)(Arr[iCnt] - 32);       
             }
         }
         
@@ -35,7 +35,7 @@ class StringX
 //  Entry point function for the application
 //
 /////////////////////////////////////////////////////////////////////////
-class program36_1
+class program36_2
 {
     public static void main(String A[])
     {
@@ -48,7 +48,7 @@ class program36_1
 
         StringX strobj = new StringX();
 
-        sRet =strobj.toLowerCaseX(sobj);      
+        sRet = strobj.toUpperCaseX(sobj);      
 
         System.out.println("updated string:"+sRet);
         
@@ -59,8 +59,8 @@ class program36_1
 //
 //  Test cases successfully handled by application
 //
-//  Input :  MARVELLOUS
-//  Output : marvellous  
+//  Input :  marvellous
+//  Output : MARVELLOUS 
 //
 //  
 ////////////////////////////////////////////////////////////////////////

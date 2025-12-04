@@ -1,9 +1,10 @@
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name : Reverse
-//  Description :  accept string from user convert it  lower case 
+//  Function Name : CountWhite
+//  Description :  accept string from user and count number of white spaces      
+//  
 //  Input :   string
-//  Output :  void           
+//  Output :  int        
 //
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   4/12/25
@@ -13,20 +14,20 @@ import java.util.*;
 
 class StringX
 {
-    public String toLowerCaseX(String str)
+    public int CountWhite(String str)
     {
         int iCnt = 0;
+        int iCount = 0;
         char Arr[] = str.toCharArray();
 
         for(iCnt= 0; iCnt<Arr.length; iCnt++)
         {
-            if(Arr[iCnt] >= 'A' && Arr[iCnt] <= 'Z' )
+            if(Arr[iCnt] == ' ' )
             {
-                Arr[iCnt] = (char)(Arr[iCnt] + 32);       
+                iCount++;     
             }
         }
-        
-        return new String(Arr);        
+        return iCount;        
     }
 }
 
@@ -35,12 +36,10 @@ class StringX
 //  Entry point function for the application
 //
 /////////////////////////////////////////////////////////////////////////
-class program36_1
+class program36_5
 {
     public static void main(String A[])
     {
-        String sRet = null;
-
         Scanner scanobj = new Scanner(System.in);
 
         System.out.println("Enter String : ");
@@ -48,10 +47,8 @@ class program36_1
 
         StringX strobj = new StringX();
 
-        sRet =strobj.toLowerCaseX(sobj);      
-
-        System.out.println("updated string:"+sRet);
-        
+        int iRet = strobj.CountWhite(sobj); 
+        System.out.println("Number of white spaces : " + iRet);     
     }
 } 
 
@@ -59,8 +56,10 @@ class program36_1
 //
 //  Test cases successfully handled by application
 //
-//  Input :  MARVELLOUS
-//  Output : marvellous  
-//
+//  Input :  MarvellouS
+//  Output : 0 
+//  
+//  Input :  MarvellouS Infosystem
+//  Output : 1 
 //  
 ////////////////////////////////////////////////////////////////////////
