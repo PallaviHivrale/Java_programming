@@ -1,9 +1,9 @@
 ////////////////////////////////////////////////////////////////////////
 //
 //  Function Name : Dispaly
-//  Description : Acount number of capital character
+//  Description : check whether string contain vowels or not 
 //  Input :   char
-//  Output :  integer            
+//  Output :  boolean            
 //
 //  Author : Pallavi Kishanrao Hivrale
 //  Date :   4/12/25
@@ -13,20 +13,20 @@ import java.util.*;
 
 class StringX
 {
-    public int CountCapital(String str)
+    public boolean ChkVowel(String str)
     {
         int iCnt = 0;
-        int iCount = 0;
-       
         char Arr[] = str.toCharArray();
-        for(iCnt=0; iCnt<Arr.length; iCnt++)
+
+        for(iCnt = 0; iCnt < Arr.length; iCnt++)
         {
-            if(Arr[iCnt] >= 'A' && Arr[iCnt]<= 'Z')
+            if((Arr[iCnt]=='a'|| Arr[iCnt]=='e'|| Arr[iCnt]=='i'|| Arr[iCnt]=='o'|| Arr[iCnt]=='u' ||
+            Arr[iCnt] =='A'|| Arr[iCnt]=='E'|| Arr[iCnt]=='I'|| Arr[iCnt]=='O'|| Arr[iCnt]=='U'))
             {
-                iCount++;
+                return true;
             }
         }
-        return iCount;
+        return false;
     }
 }
 
@@ -35,29 +35,29 @@ class StringX
 //  Entry point function for the application
 //
 /////////////////////////////////////////////////////////////////////////
-class program35_1
+class program35_4
 {
     public static void main(String A[])
-    {
-        int iRet =0;
-        
+    {    
         Scanner scanobj = new Scanner(System.in);
 
         System.out.println("Enter String : ");
         String sobj = scanobj.nextLine();
 
         StringX strobj = new StringX();
-        iRet =strobj.CountCapital(sobj);
+        boolean bRet =strobj.ChkVowel(sobj);
 
-        System.out.println("frequency of capital character is:"+iRet);
-        
+        System.out.println(bRet);
     } 
 }
 ////////////////////////////////////////////////////////////////////////
 //
 //  Test cases successfully handled by application
 //
-//  Input :   Marvellous Multi OS
-//  Output :  4         
+//  Input :  marvellous
+//  Output :     true  
+//
+//  Input :     xyz
+//  Output :    false
 //  
 ////////////////////////////////////////////////////////////////////////

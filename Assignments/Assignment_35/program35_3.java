@@ -1,7 +1,8 @@
 ////////////////////////////////////////////////////////////////////////
 //
 //  Function Name : Dispaly
-//  Description : Acount number of capital character
+//  Description : diffrence between frequency of small character
+//                and frequency of capital character
 //  Input :   char
 //  Output :  integer            
 //
@@ -13,20 +14,26 @@ import java.util.*;
 
 class StringX
 {
-    public int CountCapital(String str)
+    public int CountSmall(String str)
     {
         int iCnt = 0;
-        int iCount = 0;
-       
+        int iCountCapital = 0;
+        int iCountSmall = 0;
+
         char Arr[] = str.toCharArray();
-        for(iCnt=0; iCnt<Arr.length; iCnt++)
+
+        for(iCnt = 0; iCnt < Arr.length; iCnt++)
         {
-            if(Arr[iCnt] >= 'A' && Arr[iCnt]<= 'Z')
+            if((Arr[iCnt] >= 'A') && (Arr[iCnt] <= 'Z'))
             {
-                iCount++;
+                iCountCapital++;
+            }
+            else if(Arr[iCnt] >= 'a' && Arr[iCnt] <= 'z')
+            {
+                iCountSmall++;
             }
         }
-        return iCount;
+        return iCountSmall - iCountCapital;
     }
 }
 
@@ -35,7 +42,7 @@ class StringX
 //  Entry point function for the application
 //
 /////////////////////////////////////////////////////////////////////////
-class program35_1
+class program35_3
 {
     public static void main(String A[])
     {
@@ -47,9 +54,9 @@ class program35_1
         String sobj = scanobj.nextLine();
 
         StringX strobj = new StringX();
-        iRet =strobj.CountCapital(sobj);
+        iRet =strobj.CountSmall(sobj);
 
-        System.out.println("frequency of capital character is:"+iRet);
+        System.out.println("Diffrence  is:"+iRet);
         
     } 
 }
@@ -57,7 +64,7 @@ class program35_1
 //
 //  Test cases successfully handled by application
 //
-//  Input :   Marvellous Multi OS
-//  Output :  4         
+//  Input :  mARVELLOUS mULTI os
+//  Output :     4   
 //  
 ////////////////////////////////////////////////////////////////////////
