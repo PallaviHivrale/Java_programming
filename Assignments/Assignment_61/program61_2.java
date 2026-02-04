@@ -1,14 +1,13 @@
-// Copy data from source to destination (byte by byte)
+// Copy data using byte buffer
 
 import java.io.*;
 import java.util.*;
 
-class program61_1
+class program61_2
 {
     public static void main(String A[])throws Exception
     {
         int iRet = 0;
-        String str = null;
 
         File fobjsrc = null;
         File fobjdest = null;
@@ -28,7 +27,7 @@ class program61_1
 
         fobjsrc = new File(FileNameSrc);
 
-        if(fobjsrc.exists())
+        if((fobjsrc.exists()) && (fobjsrc.isFile()))
         {
             fobjdest = new File(FileNameDest);
 
@@ -41,14 +40,14 @@ class program61_1
             {
                 foobj.write(Buffer,0,iRet);
             }
-            System.out.println("File copy sucessfully\n");
+            System.out.println("File copy sucessfully using buffer\n");
 
             fiobj.close();
             foobj.close();
         }
         else
         {
-            System.out.println("there is no source file");
+            System.out.println("there is no such a file");
         }
         sobj.close();
     }
