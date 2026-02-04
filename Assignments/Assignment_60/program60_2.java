@@ -1,14 +1,14 @@
-// Accept directory name and calculate total size of all files
+// Display name of largest file from directory
 
 import java.io.*;   
 import java.util.*;
 
-class program60_1
+class program60_2
 {
     public static void main(String[] args)
     {
-        int TotalSize = 0;
-
+        long MaxSize = 0;
+        String MaxFileName = "";
         Scanner sobj = new Scanner(System.in);
         
         System.out.println("Enter the folder Name :");
@@ -24,12 +24,17 @@ class program60_1
             {
                 if(fArr[i].isFile())
                 {
-                    System.out.println("File Name:"+fArr[i].getName()+"File Size:"+fArr[i].length()+"bytes");
-
-                    TotalSize = TotalSize + (int)fArr[i].length();
+                    {
+                        if(fArr[i].length() > MaxSize)
+                        {
+                            MaxSize = fArr[i].length();
+                            MaxFileName = fArr[i].getName();
+                        }
+                    }
                 }
             }
-            System.out.println("total size of all file is:"+TotalSize+"bytes");
+            System.out.println("Largest file is : " + MaxFileName);
+            System.out.println("Size : " + MaxSize + " bytes");
         }
         else
         {

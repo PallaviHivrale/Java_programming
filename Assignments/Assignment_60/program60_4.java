@@ -1,18 +1,19 @@
-// Accept directory name and calculate total size of all files
+// Display files with given extension
 
 import java.io.*;   
 import java.util.*;
 
-class program60_1
+class program60_4
 {
     public static void main(String[] args)
-    {
-        int TotalSize = 0;
-
+    {   
         Scanner sobj = new Scanner(System.in);
         
         System.out.println("Enter the folder Name :");
         String FolderName = sobj.nextLine();
+
+        System.out.println("Enter the extension :");
+        String Ext = sobj.nextLine();
 
         File fobj = new File(FolderName);
 
@@ -24,12 +25,13 @@ class program60_1
             {
                 if(fArr[i].isFile())
                 {
-                    System.out.println("File Name:"+fArr[i].getName()+"File Size:"+fArr[i].length()+"bytes");
-
-                    TotalSize = TotalSize + (int)fArr[i].length();
+                    if(fArr[i].getName().endsWith(Ext))
+                    {
+                        System.out.println(fArr[i].getName());
+                    }
                 }
+                
             }
-            System.out.println("total size of all file is:"+TotalSize+"bytes");
         }
         else
         {

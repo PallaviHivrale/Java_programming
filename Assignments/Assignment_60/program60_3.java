@@ -1,14 +1,17 @@
-// Accept directory name and calculate total size of all files
+// Display name of Smallest file from directory
 
 import java.io.*;   
 import java.util.*;
 
-class program60_1
+class program60_3
 {
     public static void main(String[] args)
     {
-        int TotalSize = 0;
+        // Start with the biggest possible long value
+        // so that any file size will be smaller than this at first
+        long MinSize = Long.MAX_VALUE;
 
+        String MinFileName = ""; // string is empty 
         Scanner sobj = new Scanner(System.in);
         
         System.out.println("Enter the folder Name :");
@@ -24,12 +27,17 @@ class program60_1
             {
                 if(fArr[i].isFile())
                 {
-                    System.out.println("File Name:"+fArr[i].getName()+"File Size:"+fArr[i].length()+"bytes");
-
-                    TotalSize = TotalSize + (int)fArr[i].length();
+                    {
+                        if(fArr[i].length() <  MinSize)
+                        {
+                            MinSize = fArr[i].length();
+                            MinFileName = fArr[i].getName();
+                        }
+                    }
                 }
             }
-            System.out.println("total size of all file is:"+TotalSize+"bytes");
+            System.out.println("smallest file is : " + MinFileName);
+            System.out.println("Size : " + MinSize + " bytes");
         }
         else
         {
