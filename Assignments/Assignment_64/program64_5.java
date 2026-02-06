@@ -1,7 +1,7 @@
-// write a program which checks whether 15th bit is on or off
+// write a program which checks whether first and last bit is ON or OFF
 
 import java.util.Scanner;
-class program64_1
+class program64_5
 {
     public static void main(String A[])
     {
@@ -12,17 +12,17 @@ class program64_1
         System.out.println("Enter Number :");
         iNo = sobj.nextInt();
 
-        iMask = 0x00004000;
+        iMask = 0x00000001 | 0x80000000  ;
         
         iResult = iNo & iMask;
 
         if(iResult == iMask)
         {
-            System.out.println("15 th bit is ON");
+            System.out.println("1st & 32nd bit are ON");
         }
         else
         {
-            System.out.println("15 the bit is OFF");
+            System.out.println("1st & 32nd bit are OFF");
         }
     
     }
